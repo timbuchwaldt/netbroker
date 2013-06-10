@@ -1,15 +1,11 @@
-# InternetBroker
+# Netbroker
 
-** TODO: Add description **
+Install: ```brew install elixir```, change to cloned dir, run ```mix test```
 
+## Tryout
 
+Run ```iex -S mix```
 
+    :gen_event.notify(:em, {:activate, "172.16.0.2"})
 
-
-
-{ :ok, pid } = :gen_event.start_link
-:gen_event.add_handler(pid, Netbroker.Access, [])
-
-:gen_event.notify(pid, {:activate, "172.16.0.2"})
-
-:gen_event.call(pid,Netbroker.Access, :display)
+    :gen_event.call(:em, Netbroker.Access, :display)
