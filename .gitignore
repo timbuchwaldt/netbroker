@@ -1,0 +1,4 @@
+/ebin
+/deps
+erl_crash.dump
+.DS_Store
